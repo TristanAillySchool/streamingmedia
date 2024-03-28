@@ -1,13 +1,43 @@
 * {
     background-color: #020659;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0 auto;
 }
 
-ul {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height .2s ease-out;
+audio::-webkit-media-controls-mute-button {
+
 }
+audio::-webkit-media-controls-play-button {
+
+}
+audio::-webkit-media-controls-enclosure {
+
+}
+
+#trending ::-webkit-scrollbar {
+
+}
+#trending ::-webkit-scrollbar-track {
+
+}
+#trending ::-webkit-scrollbar-thumb {
+
+}
+#trending ::-webkit-scrollbar-thumb:hover {
+
+}
+#playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
+
+}
+#playlists ::-webkit-scrollbar-track, #curated ::-webkit-scrollbar-track  {
+
+}
+#playlists ::-webkit-scrollbar-thumb, #curated ::-webkit-scrollbar-thumb {
+
+}
+#playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
+
+}
+
 label {
     cursor: pointer;
     display: inline-block;
