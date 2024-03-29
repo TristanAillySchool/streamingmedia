@@ -31,6 +31,10 @@ body {
     text-align: center;
 }
 
+#playlists .scroll h2, #curated .scroll h2 {
+    color: #fff;
+}
+
 main {
     background-color: #fff;
 }
@@ -74,6 +78,11 @@ ul {
     max-height: 0;
     transition: max-height .2s ease-out;
 }
+
+nav ul li:first-child a {
+    font-weight: bold;
+}
+
 label {
     cursor: pointer;
     display: inline-block;
@@ -81,6 +90,7 @@ label {
     position: relative;
     user-select: none;
 }
+
 label span {
     background-color: #ffffff;
     display: block;
@@ -89,6 +99,7 @@ label span {
     transition: background-color .2s ease-out;
     width: 18px;
 }
+
 label span:before, label span:after {
     background: #ffffff;
     content: '';
@@ -98,27 +109,35 @@ label span:before, label span:after {
     transition: all .2s ease-out;
     width: 100%;
 }
+
 label span:before {
     top: 5px;
 }
+
 label span:after {
     top: -5px;
 }
+
 input {
     display: none;
 }
+
 input:checked ~ ul {
     max-height: 500px;
 }
+
 input:checked ~ label span {
     background: transparent;
 }
+
 input:checked ~ label span:before {
     transform: rotate(-45deg);
 }
+
 input:checked ~ label span:after {
     transform: rotate(45deg);
 }
+
 input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
 }
@@ -179,6 +198,17 @@ button {
 
 button:hover {
     background-color: #020659;
+}
+
+footer {
+    text-align: center;
+    background-color: #fff;
+    margin: 0;
+}
+
+footer p {
+    color: #590242;
+    font-size: 0.75em;
 }
 
 
@@ -286,13 +316,9 @@ button:hover {
         font-size: 1.25em;
         
     }
-
-
 }
 
-nav ul li:first-child a {
-    font-weight: bold;
-}
+
 
 
 audio::-webkit-media-controls-mute-button {
@@ -332,15 +358,4 @@ audio::-webkit-media-controls-enclosure {
 }
 #playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
     background: #fff;
-}
-
-footer {
-    text-align: center;
-    background-color: #fff;
-    margin: 0;
-}
-
-footer p {
-    color: #590242;
-    font-size: 0.75em;
 }
