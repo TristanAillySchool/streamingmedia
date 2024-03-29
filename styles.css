@@ -3,20 +3,36 @@ body {
     margin: 0 auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #fff;
+    max-width: 834px;
 }
 
 #trending {
-    max-width: 834px;
     background-color: #fff;
+    color: #590242;
+}
+
+#trending h2, #playlists h2, #curated h2 {
+    padding: 1em;
 }
 
 #trending h3 {
     color: #590242;
 }
 
-#playlists {
-    max-width: 834px;
+#playlists .scroll {
     background-color: #0D8DFB;
+}
+
+#curated .scroll {
+    background-color: #030A8C;
+} 
+
+#playlists section, #curated section {
+    text-align: center;
+}
+
+main {
+    background-color: #fff;
 }
 
 h1 {
@@ -25,6 +41,7 @@ h1 {
 
 h2, h3 {
     font-size: 1em;
+    color: #590242;
 }
 
 p, dl, dd {
@@ -32,9 +49,15 @@ p, dl, dd {
 }
 
 nav {
-    position: relative;
+    display: flex;
+    justify-content: center;
     background-color: #030A8C;
     color: #fff;
+}
+
+nav ul li:first-child a {
+    text-transform: none;
+    
 }
 
 nav ul {
@@ -121,21 +144,44 @@ input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps)
     width: 350px;
 }
 
+.scroll div h3 {
+    margin: 0;
+    margin-bottom: 8px;
+}
+
 dl {
     display: flex;
     color: #590242;
+    margin-top: 0;
 }
 
 dt {
     padding-right: 5px;
 }
 
-
 audio {
     position: absolute;
     bottom: 150px;
     left: 5px;
 }
+
+button {
+    text-decoration: none;
+    background-color: #590242;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    width: 150px;
+    display: block;
+    text-align: center;
+    margin: 10px 0 30px 32px;
+}
+
+button:hover {
+    background-color: #020659;
+}
+
+
 
 @media screen and (min-width:834px) {
     ul {
@@ -148,7 +194,106 @@ audio {
     label span, input {
         display: none;
     }
+
+    #trending button {
+        position: relative;
+        left: 640px;
+    }
+
+
+    #playlists, #curated {
+        width: 417px;
+        max-width: 417px;
+    }
+
+    .playlists-grid {
+        display: flex;
+    }
+
+    #playlists {
+        float: left;
+    }
+
+    #curated {
+        float: right;
+    }
+
+    #playlists section, #curated section {
+        text-align: center;
+    }
+
+    #playlists img, #curated img {
+        float: left;
+    }
+
+    #playlists .scroll, #curated .scroll {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #playlists .scroll {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 400px;
+        max-width: 417px;
+    }
+
+    #curated .scroll {
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: 400px;
+        max-width: 417px;
+    }
+    
+    .bottom-buttons {
+        display: flex;
+        width: 417px;
+        justify-content: end;
+    }
+
+    .bottom-buttons button {
+        margin-right: 16px;
+    }
+
+
+    nav {
+        background-color: #030A8C;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    nav ul li {
+        margin-left: 50px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    nav ul li a:hover {
+        background-color: #590242;
+    }
+
+    nav ul li:first-child a {
+        font-size: 1.25em;
+        
+    }
+
+
 }
+
+nav ul li:first-child a {
+    font-weight: bold;
+}
+
 
 audio::-webkit-media-controls-mute-button {
     background-color: #fff;
@@ -189,6 +334,13 @@ audio::-webkit-media-controls-enclosure {
     background: #fff;
 }
 
+footer {
+    text-align: center;
+    background-color: #fff;
+    margin: 0;
+}
+
 footer p {
+    color: #590242;
     font-size: 0.75em;
 }
